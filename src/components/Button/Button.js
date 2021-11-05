@@ -1,19 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button } from "@telekom/scale-components-react";
+import { ScaleButton } from "@telekom/scale-components-react-neutral";
+
 
 function ButtonM(props) {
   return (
-    <Button {...props}>{props.children}</Button>
+    <ScaleButton {...props}>{props.children}</ScaleButton>
   );
 }
 
 ButtonM.propTypes = {
 /**
- * label of the button.
- * @uxpinpropname Label
+ * children.
+ *
  */
- children: PropTypes.string,
+ children: PropTypes.node,
 
 /**
  * (optional) If true, the button is disabled.

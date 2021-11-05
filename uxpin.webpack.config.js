@@ -15,11 +15,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: {
+           loader: 'file-loader',
+        },
+      },
+      {
         test: /\.(s*)css$/,
         use: [
           {
             loader: 'style-loader'
           },
+
           {
             loader: 'css-loader',
             options: {
