@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleCheckbox } from "@telekom/scale-components-react-neutral";
+import { ScaleCheckbox } from "@telekom/scale-components-react";
 
 function CheckboxM(props) {
     return (
@@ -8,11 +8,9 @@ function CheckboxM(props) {
     )
   }
 
-
-
 CheckboxM.propTypes = {
 /**
- * (optional) Active switch
+ * (optional) Active swi tch
  */
 checked: PropTypes.bool,
 
@@ -32,4 +30,4 @@ helperText: PropTypes.string,
 label: PropTypes.string
 }
 
-  export { CheckboxM as default }
+export { CheckboxM as default }

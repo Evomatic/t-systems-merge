@@ -5,7 +5,12 @@ module.exports = {
         name: 'General',
         include: [
           'src/components/Button/Button.jsx',
-          // 'src/components/Checkbox/Checkbox.jsx',
+          'src/components/Checkbox/Checkbox.jsx',
+          'src/components/NotificationMessage/NotificationMessage.jsx',
+          'src/components/RatingStars/RatingStars.jsx',
+          'src/components/Switch/Switch.jsx',
+          'src/components/Tag/Tag.jsx',
+          'src/components/TextField/TextField.jsx',
         ],
       },
     ],

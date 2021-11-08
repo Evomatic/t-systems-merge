@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ScaleButton } from "@telekom/scale-components-react";
-
+import { ScaleIconNavigationExternalLink } from "@telekom/scale-components-react";
 
 /**
  * @uxpinwrappers
@@ -10,7 +10,9 @@ import { ScaleButton } from "@telekom/scale-components-react";
 function ButtonM(props) {
   const { uxpinRef, ...other } = props;
   return (
-    <ScaleButton {...other} ref={uxpinRef}>{props.children}</ScaleButton>
+    <ScaleButton {...other} ref={uxpinRef}>
+      {props.children}
+    </ScaleButton>
   );
 }
 
