@@ -2,6 +2,11 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
+  plugins: [
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1
+    })
+  ],
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
@@ -37,7 +42,7 @@ module.exports = {
       },
       {
         loader: require.resolve('babel-loader', { paths: ['./node_modules/@uxpin/merge-cli'] }),
-        test: /\.js?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         options: {
           presets: [

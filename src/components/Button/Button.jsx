@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleButton } from "@telekom/scale-components-react-neutral";
+import { ScaleButton } from "@telekom/scale-components-react";
 
 
+/**
+ * @uxpinwrappers
+ * SkipContainerWrapper
+ */
 function ButtonM(props) {
+  const { uxpinRef, ...other } = props;
   return (
-    <ScaleButton {...props}>{props.children}</ScaleButton>
+    <ScaleButton {...other} ref={uxpinRef}>{props.children}</ScaleButton>
   );
 }
 
@@ -40,6 +45,8 @@ ButtonM.propTypes = {
  * (optional) Button type.
  */
  type:PropTypes.oneOf(["button", "reset", "submit"]),
+
+ variant: PropTypes.oneOf(["primary", "secondary", "ghost"]),
 };
 
 export { ButtonM as default };

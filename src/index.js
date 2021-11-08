@@ -9,9 +9,9 @@ import reportWebVitals from './reportWebVitals';
 
 
 
-applyPolyfills().then(() => {
-  defineCustomElements(window);
-})
+// applyPolyfills().then(() => {
+//   defineCustomElements(window);
+// })
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
