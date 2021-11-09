@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleCheckbox } from "@telekom/scale-components-react";
+import reactifyWc from "reactify-wc";
+// import { ScaleCheckbox } from "@telekom/scale-components-react";
+
+const ScaleCheckbox = reactifyWc('scale-checkbox');
+
 
 function CheckboxM(props) {
     return (

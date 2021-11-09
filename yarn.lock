@@ -10015,6 +10015,11 @@ react@^17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+reactify-wc@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/reactify-wc/-/reactify-wc-4.0.0.tgz#7e55f4f28c3222764335e5760b2a9ac4b5c93173"
+  integrity sha512-NLBk/0oYD3/v273xCvNbCWgAvlRYfBQX/k1BnPu0DTpE/Jwp8tTHzlc2vAmm1VO4DnOM81idSMeuVS78K4VXwQ==
+
 read-pkg-up@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-7.0.1.tgz#f3a6135758459733ae2b95638056e1854e7ef507"

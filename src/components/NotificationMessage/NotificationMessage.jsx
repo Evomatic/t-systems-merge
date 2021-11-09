@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleNotificationMessage } from "@telekom/scale-components-react";
+import reactifyWc from "reactify-wc";
+// import { ScaleNotificationMessage } from "@telekom/scale-components-react";
+
+const ScaleNotificationMessage= reactifyWc('scale-notification-message');
 
 function NotificationMessageM(props) {
     return (
       <ScaleNotificationMessage {...props}>
         {props.children}
-        <p slot="text">Here you can add some more text.</p>
-        {/* {props.text ? <p slot="text">{props.text}</p> : null} */}
+        {/* <p slot="text">Here you can add some more text.</p> */}
+        {props.text ? <p slot="text">{props.text}</p> : null}
       </ScaleNotificationMessage>
     )
   }

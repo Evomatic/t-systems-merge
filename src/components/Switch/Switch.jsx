@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleSwitch } from "@telekom/scale-components-react";
+import reactifyWc from "reactify-wc";
+// import { ScaleSwitch } from "@telekom/scale-components-react";
+
+const ScaleSwitch = reactifyWc('scale-switch');
 
 function SwitchM(props) {
     return (

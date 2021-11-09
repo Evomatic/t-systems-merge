@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleRatingStars } from "@telekom/scale-components-react";
+import reactifyWc from "reactify-wc";
+// import { ScaleRatingStars } from "@telekom/scale-components-react";
+
+const ScaleRatingStars = reactifyWc('scale-rating-stars');
+
 
 function RatingStarsM(props) {
   return (

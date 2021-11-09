@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import reactifyWc from "reactify-wc";
 import { ScaleButton } from "@telekom/scale-components-react";
-import { ScaleIconNavigationExternalLink } from "@telekom/scale-components-react";
+const ScaleIconActionFavorite = reactifyWc('scale-icon-action-favorite');
+const ScaleIconActionAdd = reactifyWc('scale-icon-action-add');
 
 /**
  * @uxpinwrappers
@@ -32,6 +34,8 @@ ButtonM.propTypes = {
  * (optional) Set to true when the button contains only an icon.
  */
  iconOnly: PropTypes.bool,
+
+ startIcon: PropTypes.bool,
 
 /**
  * (optional) Icon position related to the label.

@@ -1,16 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleTag } from "@telekom/scale-components-react";
+import reactifyWc from "reactify-wc";
+// import { ScaleTag } from "@telekom/scale-components-react";
+
+const ScaleTag = reactifyWc('scale-tag');
 
 function TagM(props) {
     return (
-      <ScaleTag {...props} href={`https://${props.href}`}>
+      <ScaleTag {...props}>
         {props.children}
       </ScaleTag>
     )
   }
 
 TagM.propTypes = {
+/**
+ * Works
+ * @uxpinpropname Text
+ */
+children: PropTypes.string,
+
 /**
  * Works
  */
@@ -28,6 +37,7 @@ disabled: PropTypes.bool,
 
 /**
  * Works
+ * The dismissable icon shows but not sure how to get it to perform a function on click without adding it to the whole component, which would break the href prop.
  */
 dismissable: PropTypes.bool,
 
@@ -37,14 +47,10 @@ dismissable: PropTypes.bool,
 dismissText: PropTypes.string,
 
 /**
- * Not sure if Works
+ * 
  */
-target: PropTypes.string,
+target: PropTypes.oneOf(['_blank', '_self', '_parent', '_top']),
 
-/**
- * Works
- */
-children: PropTypes.string,
 
 /**
  * Works

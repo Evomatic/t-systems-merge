@@ -1,14 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ScaleTextField } from "@telekom/scale-components-react";
+import reactifyWc from "reactify-wc";
+
+const ScaleTextField = reactifyWc('scale-text-field');
 
 function TextFieldM(props) {
-    return (
-      <ScaleTextField {...props} />
-    )
-  }
+  return (
+    <ScaleTextField {...props} />
+  )
+}
 
 TextFieldM.propTypes = {
+/**
+ * Works
+ * @uxpinpropname Text Value
+ */
+value: PropTypes.string,
+
+/**
+ * Works
+ */
+placeholder: PropTypes.string,
+
+/**
+ * Works
+ */
+label: PropTypes.string,
+
+/**
+ * Works
+ */
+helperText: PropTypes.string,
+
 /**
  * Works
  */
@@ -25,24 +48,9 @@ disabled: PropTypes.bool,
 readOnly: PropTypes.bool,
 
 /**
- * Doesn't Work
+ * Doesn't appear to do anything to my knowledge
  */
 required: PropTypes.bool,
-
-/**
- * Works
- */
-helperText: PropTypes.string,
-
-/**
- * Works
- */
-value: PropTypes.string,
-
-/**
- * Works
- */
-inputId: PropTypes.string,
 
 /**
  * Doesn't Work
@@ -52,12 +60,7 @@ invalid: PropTypes.bool,
 /**
  * Works
  */
-label: PropTypes.string,
-
-/**
- * Works
- */
-placeholder: PropTypes.string,
+inputId: PropTypes.string,
 
 /**
  * Works
